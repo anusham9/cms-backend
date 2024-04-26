@@ -26,6 +26,8 @@ Each role is mapped to a different id:
 I ran the Spring Boot application, which created all the schema and tables for my database from the entity classes. 
 
 The Employee service layer creates the admin user in the @Post Configuration annotation. The user_roles table should map the user id (1) to the role id (1), like so:
+
+
 <img width="328" alt="Screenshot 2024-04-26 at 11 47 39 AM" src="https://github.com/anusham9/cms-backend/assets/148721336/39d7ab94-4e10-49d7-b09e-8d275e6207ce">
 
 If the table is not updated, you can insert these values directly into it. Make sure that the admin's user ID is mapped to the role ID. 
@@ -35,7 +37,7 @@ If the table is not updated, you can insert these values directly into it. Make 
 In this project, I used Java Spring Boot and MySQL to store client and employee information and map each user to their respective roles. 
 
 ### Dependencies / Libraries
-The pom.xml file should include all necessary dependencies, but if not, use the spring initializer to install the Spring Security dependency, Spring Security Test, Spring Web dependency, Spring Data JPA dependency, and MySQL driver dependency. 
+The pom.xml file should include all necessary dependencies, but if not, use the spring initializer to install the Spring Security, Spring Security Test, Spring Web, Spring Data JPA, and MySQL driver dependencies. 
 Be sure to install Lombok as well, as I have used those annotations to reduce boilerplate code. 
 
 
