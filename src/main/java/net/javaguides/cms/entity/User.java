@@ -22,7 +22,7 @@ import lombok.Setter;
 
 /**
  * Represents an abstract user entity in the system.
- * This class is a part of the Content Management System (CMS) package defined for managing user data.
+ * This class is a part of the Client Management System (CMS) package defined for managing user data.
  * It is mapped to the "users" table in the database with an inheritance strategy of type JOINED,
  * which is suitable for subclassing this entity in the database.
  *
@@ -92,7 +92,7 @@ public abstract class User {
    */
   @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
   @JoinTable(name = "users_roles",
-      //users - primary key becomes foreing key in user_roles table
+      //users - primary key becomes foreign key in user_roles table
       joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
       inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id", table = "Role")
   )
