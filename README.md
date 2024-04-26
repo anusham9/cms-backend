@@ -36,6 +36,15 @@ If the table is not updated, you can insert these values directly into it. Make 
 ## Technologies
 In this project, I used Java Spring Boot and MySQL to store client and employee information and map each user to their respective roles. 
 
+To get a JSON representation of the API definition, you can go to http://localhost:8080/api-docs. 
+
+You can then use a swagger editor and paste the JSON file for readability of the file: https://editor.swagger.io/.
+
+
+<img width="1431" alt="Screenshot 2024-04-26 at 4 28 48 PM" src="https://github.com/anusham9/cms-backend/assets/148721336/33b803a0-fa9a-4563-b786-644c85a89b1e">
+
+
+
 ### Dependencies / Libraries
 The pom.xml file should include all necessary dependencies, but if not, use the spring initializer to install the Spring Security, Spring Security Test, Spring Web, Spring Data JPA, and MySQL driver dependencies. 
 Be sure to install Lombok as well, as I have used those annotations to reduce boilerplate code. 
