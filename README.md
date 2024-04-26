@@ -19,7 +19,7 @@ After initializing the project, in the application properties folder file under 
 
 After creating the database, I created a role table with three roles: ROLE_ADMIN, ROLE_EMPLOYEE, and ROLE_CLIENT. 
 
-Each role is mapped to a different id, as so:
+Each role is mapped to a different id:
 
 <img width="321" alt="Screenshot 2024-04-26 at 11 44 44 AM" src="https://github.com/anusham9/cms-backend/assets/148721336/872bc9e7-0107-488c-8222-198d202dbf01">
 
