@@ -1,5 +1,5 @@
 # CLIENT MANAGEMENT SYSTEM 
-During my time at a non-profit, I observed that our client data system had a serious backlog and inconsistencies in data entry because we were manually entering their data from an intake form.
+During my time at a non-profit, I observed that our client data system had a serious backlog and inconsistencies in data entry because we manually entered their data from an intake form.
 
 To resolve this issue, I developed a client and employee management system with role-based authentication so that clients have the agency to update their own information from their end,
 and employees can approve the status of the client's profile if the client has filled out their intake correctly. 
@@ -35,7 +35,7 @@ If the table is not updated, you can insert these values directly into it. Make 
 In this project, I used Java Spring Boot and MySQL to store client and employee information and map each user to their respective roles. 
 
 ### Dependencies / Libraries
-The pom.xml file should include all necessary dependencies, but if not, use the spring initialzr to install the Spring Security dependency, Spring Security Test, Spring Web dependency, Spring Data JPA dependency, and MySQL driver dependency. 
+The pom.xml file should include all necessary dependencies, but if not, use the spring initializer to install the Spring Security dependency, Spring Security Test, Spring Web dependency, Spring Data JPA dependency, and MySQL driver dependency. 
 Be sure to install Lombok as well, as I have used those annotations to reduce boilerplate code. 
 
 
