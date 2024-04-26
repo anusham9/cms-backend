@@ -81,7 +81,7 @@ public class SpringSecurityConfig {
     http.csrf((csrf) -> csrf.disable())
         .sessionManagement(manager -> manager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .authorizeHttpRequests((authorize) -> {
-
+          authorize.requestMatchers("/api-docs").permitAll();
           authorize.requestMatchers("/cms/employees").hasRole("ADMIN");
           authorize.requestMatchers("/cms/employees/*").hasRole("ADMIN");
           authorize.requestMatchers("/cms/clients").hasAnyRole("EMPLOYEE", "ADMIN");
