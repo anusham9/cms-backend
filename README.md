@@ -46,7 +46,15 @@ You can then use a swagger editor and paste the JSON file for readability of the
 
 
 ### Dependencies / Libraries
-The pom.xml file should include all necessary dependencies, but if not, use the spring initializer to install the Spring Security, Spring Security Test, Spring Web, Spring Data JPA, and MySQL driver dependencies. 
-Be sure to install Lombok as well, as I have used those annotations to reduce boilerplate code. 
+
+Please add the following dependency to the pom.xml file:
+
+<img width="515" alt="Screenshot 2024-04-26 at 4 30 03 PM" src="https://github.com/anusham9/cms-backend/assets/148721336/b522ac3f-7764-409f-9e16-4cebdf8b30af">
+
+
+
+Besides the OpenAPI dependency, the pom.xml file should include all other necessary dependencies, but if not, use the spring initializer to install the Spring Security, Spring Security Test, Spring Web, Spring Data JPA, and MySQL driver dependencies. 
+
+Be sure to include Lombok as well, as I have used those annotations to reduce boilerplate code. 
 
 
