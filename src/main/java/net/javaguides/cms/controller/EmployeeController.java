@@ -26,13 +26,12 @@ public class EmployeeController {
 
   private EmployeeService employeeService;
 
-  //Build POST API to create new employee
-
-  /**
-   * Creates new employee
-   * @param employeeDto
-   * @return
-   */
+   /**
+   * Creates a new employee using the provided employee data transfer object (DTO).
+   * 
+   * @param employeeDto the DTO containing data for the new employee
+   * @return a {@link ResponseEntity} containing the created employee DTO and the HTTP status code
+   */ 
   @PostMapping("/employees")
   public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employeeDto) {
     EmployeeDto savedEmployee = employeeService.createEmployee(employeeDto);
@@ -41,8 +40,9 @@ public class EmployeeController {
   }
 
   /**
-   * Gets a list of all employees
-   * @return
+   * Retrieves a list of all employees.
+   * 
+   * @return a {@link ResponseEntity} containing a list of employee DTOs and the HTTP status code
    */
   @GetMapping("/employees")
   public ResponseEntity<List<EmployeeDto>> getAllEmployees() {
@@ -54,11 +54,11 @@ public class EmployeeController {
   //Build GET API for one employee
 
   /**
-   * gets an employee's profile
-   * @param employeeId
-   * @return
+   * Retrieves the profile of a specific employee identified by their unique ID.
+   * 
+   * @param employeeId the unique ID of the employee to retrieve
+   * @return a {@link ResponseEntity} containing the employee DTO and the HTTP status code
    */
-
   @GetMapping("/employees/{id}")
   public ResponseEntity<EmployeeDto> getEmployee(@PathVariable("id") Long employeeId) {
     EmployeeDto employeeDto = employeeService.getEmployeeById(employeeId);
@@ -67,9 +67,10 @@ public class EmployeeController {
   }
 
   /**
-   * deletes an employee
-   * @param employeeId
-   * @return
+   * Deletes an employee from the system based on their unique ID.
+   * 
+   * @param employeeId the unique ID of the employee to delete
+   * @return a {@link ResponseEntity} with a confirmation message and the HTTP status code
    */
   @DeleteMapping("/employees/{id}")
   public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long employeeId) {
@@ -78,18 +79,28 @@ public class EmployeeController {
     return new ResponseEntity<>("Employee deleted from system!", HttpStatus.OK);
   }
 
-  /**
-   * Modifies the employee's details, like their first name, last name, or
-   * @param employeeId
-   * @param updatedEmployee
-   * @return
+ /**
+   * Updates the details of an existing employee identified by their unique ID.
+   * 
+   * @param employeeId Long unique ID of the employee to update
+   * @param updatedEmployee the employee DTO containing updated fields
+   * @return a {@link ResponseEntity} containing the updated employee DTO and the HTTP status code
    */
+  
   @PutMapping("/employees/{id}")
   public ResponseEntity<EmployeeDto> updateEmployeeRecord(@PathVariable("id") Long employeeId, @RequestBody EmployeeDto updatedEmployee) {
     EmployeeDto employeeDto = employeeService.updateEmployee(employeeId, updatedEmployee);
     return new ResponseEntity<>(employeeDto,HttpStatus.OK);
   }
 
+  /**
+   * Changes the password for an employee identified by their unique ID.
+   * 
+   * @param id Long unique ID of the employee whose password is to be changed
+   * @param passwordChangeDto the DTO containing the new password details
+   * @return a {@link ResponseEntity} with a success or failure message and the HTTP status code
+   */
+  
   @PatchMapping("/employees/{id}/change-password")
   public ResponseEntity<String> changePassword(@PathVariable("id") Long id, @RequestBody PasswordChangeDto passwordChangeDto) {
 
