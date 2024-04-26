@@ -10,10 +10,6 @@ package net.javaguides.cms.entity;
  *   <li>name: The name of the role, which describes the role's purpose or associated permissions.
  * </ul>
  *
- * <p>This class is annotated with Lombok annotations to provide boilerplate code such as getters, setters,
- * and constructors both with and without parameters. This simplifies the entity management by reducing
- * the manual coding required for such repetitive tasks.
- *
  * <p>Usage of this entity includes, but is not limited to, assigning roles to users to control access permissions
  * across the system. Roles can be used in conjunction with Spring Security to secure endpoints based on user roles.
  *
