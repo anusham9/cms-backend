@@ -43,7 +43,7 @@ If the table is not updated, you can insert these values directly into it. Make 
 ## Technologies
 In this project, I used Java Spring Boot and MySQL to store client and employee information and map each user to their respective roles. 
 
-To get a JSON representation of the API definition, you can go to http://localhost:8080/api-docs. 
+To get a JSON representation of the API definition, you can go to http://localhost:8080/api-docs. This gives an easy accessible UI for understanding and visualizing the REST APIs in this project. 
 
 You can then use a swagger editor and paste the JSON file for readability of the file: https://editor.swagger.io/.
 
