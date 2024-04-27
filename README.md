@@ -13,7 +13,14 @@ For this project, I used spring intialzr to install the necessary spring-web-sta
 
 I then installed MySQL Workbench to create a database called CMS. 
 
-After initializing the project, in the application properties folder file under resources, I put the correct url to connect to the MySQL database. 
+After initializing the project, in the application properties folder file under resources, I put the correct url to connect to the MySQL database in the application properties file.
+
+I also recommend adding the following:
+
+# /api-docs endpoint custom path
+springdoc.api-docs.path=/api-docs
+
+This is to generate the JSON representation of the API definitions. 
 
 <img width="619" alt="Screenshot 2024-04-26 at 11 52 50 AM" src="https://github.com/anusham9/cms-backend/assets/148721336/0b4647c6-7794-4f83-a623-e94ea3880251">
 
